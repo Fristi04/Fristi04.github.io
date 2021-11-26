@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Source+Code+Pro:ital,wght@1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Source+Code+Pro:ital,wght@1,500&display=swap');
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    /* START WEBKIT */
+    INPUT[type="password"] {
+        font-family: Verdana, sans-serif;
+    }
+}
+
 html,
 body {
     margin: 0;
@@ -202,7 +209,6 @@ body {
 }
 
 .foldertxt {
-    text-align: center;
     z-index: 1000;
     margin-right: 0;
     background-color: rgba(0, 0, 0, 0.322);
@@ -228,6 +234,26 @@ body {
     margin: 5px;
     margin-right: 10px;
     user-select: none;
+}
+
+.password {
+    height: 65px;
+    padding: 5px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.692);
+    float: none;
+    margin: auto;
+    width: 50%;
+    border: 1px solid #4aff18ce;
+    display: none;
+}
+
+.passInput {
+    border: 1px solid #4aff18ce;
+    background-color: black;
+    outline: none;
+    color: #00ff00;
+    margin: 10px;
 }
 
 ul {

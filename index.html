@@ -65,7 +65,7 @@
         </div>
 
         <div class="dragable" id="console" style="right: 0;">
-            <div id="mydivheader">
+            <div class="drag dragger" id="mydivheader">
                 <div style="text-align: right;">
                     <a class="headertxt" style="float: left;">console</a>
                     <a class="headertxt headerx close">X</a>
@@ -88,7 +88,7 @@
 
 
         <div class="dragable" style=" left: 0; display: none;" id="console2">
-            <div id="mydivheader">
+            <div class="dragger" id="mydivheader">
                 <div style="text-align: right; ">
                     <a class="headertxt" style="float: left;">Docs</a>
                     <a class="headertxt headerx close2">X</a>
@@ -107,7 +107,7 @@
 
 
         <div class="dragable" style="display: none; left: 0; height: 350px; width: 429px;" id="cam">
-            <div id="mydivheader">
+            <div class="dragger" id="mydivheader">
                 <div style="text-align: right;">
                     <a class="headertxt" style="float: left;">Cam</a>
                     <a class="headertxt headerx close3">X</a>
@@ -120,8 +120,8 @@
 
         </div>
 
-        <div class="dragable" style="display: none; left: 0; height: 450px; width: 429px;" id="files">
-            <div id="mydivheader">
+        <div class="dragable" style="display: none; left: 0; height: 450px; width: 480px;" id="files">
+            <div class="dragger" id="mydivheader">
                 <div style="text-align: right;">
                     <a class="headertxt" style="float: left;">Files</a>
                     <a class="headertxt headerx close4">X</a>
@@ -129,39 +129,72 @@
             </div>
 
             <div class="files">
-                <div class="folder1">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
-                        <g>
-                            <path fill="#00ff00"; d="M56.981,11.5H28.019V6.52c0-1.665-1.354-3.02-3.019-3.02H3.019C1.354,3.5,0,4.854,0,6.52V20.5h60v-5.98   C60,12.854,58.646,11.5,56.981,11.5z"/>
-                            <path fill="#00ff00"; d="M0,53.48c0,1.665,1.354,3.02,3.019,3.02h53.962c1.665,0,3.019-1.354,3.019-3.02V22.5H0V53.48z"/>
-                        </g>
-                    </svg>
-                    <a class="headertxt2 foldertxt">word.exe</a>
+                <div id="mainFolder">
+
+
+                    <div id="sec" class="folder1">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+                            <g>
+                                <path fill="#00ff00"; d="M56.981,11.5H28.019V6.52c0-1.665-1.354-3.02-3.019-3.02H3.019C1.354,3.5,0,4.854,0,6.52V20.5h60v-5.98   C60,12.854,58.646,11.5,56.981,11.5z"/>
+                                <path fill="#00ff00"; d="M0,53.48c0,1.665,1.354,3.02,3.019,3.02h53.962c1.665,0,3.019-1.354,3.019-3.02V22.5H0V53.48z"/>
+                            </g>
+                        </svg>
+                        <a class="headertxt2 foldertxt">Secrets🔒</a>
+                    </div>
+                    <div class="folder1">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+                            <g>
+                                <path fill="#00ff00"; d="M56.981,11.5H28.019V6.52c0-1.665-1.354-3.02-3.019-3.02H3.019C1.354,3.5,0,4.854,0,6.52V20.5h60v-5.98   C60,12.854,58.646,11.5,56.981,11.5z"/>
+                                <path fill="#00ff00"; d="M0,53.48c0,1.665,1.354,3.02,3.019,3.02h53.962c1.665,0,3.019-1.354,3.019-3.02V22.5H0V53.48z"/>
+                            </g>
+                        
+                        </svg>
+                        <a class="headertxt2 foldertxt">Homework</a>
+                    </div>
+
+                    <div class="folder1" id="homeworkFolder">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+                            <g>
+                                <path fill="#00ff00"; d="M56.981,11.5H28.019V6.52c0-1.665-1.354-3.02-3.019-3.02H3.019C1.354,3.5,0,4.854,0,6.52V20.5h60v-5.98   C60,12.854,58.646,11.5,56.981,11.5z"/>
+                                <path fill="#00ff00"; d="M0,53.48c0,1.665,1.354,3.02,3.019,3.02h53.962c1.665,0,3.019-1.354,3.019-3.02V22.5H0V53.48z"/>
+                            </g>
+                        
+                        </svg>
+                        <a class="headertxt2 foldertxt">Hacks</a>
+                    </div>
+
+                    <di id="pass" class="folder1 password">
+                        <a class="headertxt2 foldertxt" style="text-align: center; float: none;">Password</a>
+                        <input class="passInput" type="password" id="passwordInput" autocomplete="off" spellcheck="false" id="cmdInput" name="commandline">
+                    </di>
                 </div>
-                <div class="folder1">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
-                        <g>
-                            <path fill="#00ff00"; d="M56.981,11.5H28.019V6.52c0-1.665-1.354-3.02-3.019-3.02H3.019C1.354,3.5,0,4.854,0,6.52V20.5h60v-5.98   C60,12.854,58.646,11.5,56.981,11.5z"/>
-                            <path fill="#00ff00"; d="M0,53.48c0,1.665,1.354,3.02,3.019,3.02h53.962c1.665,0,3.019-1.354,3.019-3.02V22.5H0V53.48z"/>
-                        </g>
-                       
-                    </svg>
-                    <a class="headertxt2 foldertxt">Homework</a>
+                <div id="inHomework" style="display: none;">
+                    <div class="folder1" id="backHacks">
+                        <svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon  fill="#00ff00"; points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 "/></svg>
+                    </div>
+                    <div class="folder1">
+                        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#00ff00"; d="M12 4c-2.21 0-3.98 1.79-3.98 4l-.02 32c0 2.21 1.77 4 3.98 4h24.02c2.21 0 4-1.79 4-4v-24l-12-12h-16zm14 14v-11l11 11h-11z"/><path d="M0 0h48v48h-48z" fill="none"/></svg>
+                        <a class="headertxt2 foldertxt">Word.exe</a>
+                    </div>
+                    <div class="folder1">
+                        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#00ff00"; d="M12 4c-2.21 0-3.98 1.79-3.98 4l-.02 32c0 2.21 1.77 4 3.98 4h24.02c2.21 0 4-1.79 4-4v-24l-12-12h-16zm14 14v-11l11 11h-11z"/><path d="M0 0h48v48h-48z" fill="none"/></svg>
+                        <a class="headertxt2 foldertxt">Settings</a>
+                    </div>
+                    <div class="folder1">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+                            <g>
+                                <path fill="#00ff00"; d="M56.981,11.5H28.019V6.52c0-1.665-1.354-3.02-3.019-3.02H3.019C1.354,3.5,0,4.854,0,6.52V20.5h60v-5.98   C60,12.854,58.646,11.5,56.981,11.5z"/>
+                                <path fill="#00ff00"; d="M0,53.48c0,1.665,1.354,3.02,3.019,3.02h53.962c1.665,0,3.019-1.354,3.019-3.02V22.5H0V53.48z"/>
+                            </g>
+                        
+                        </svg>
+                        <a class="headertxt2 foldertxt">Assets</a>
+                    </div>
                 </div>
-                <div class="folder1">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
-                        <g>
-                            <path fill="#00ff00"; d="M56.981,11.5H28.019V6.52c0-1.665-1.354-3.02-3.019-3.02H3.019C1.354,3.5,0,4.854,0,6.52V20.5h60v-5.98   C60,12.854,58.646,11.5,56.981,11.5z"/>
-                            <path fill="#00ff00"; d="M0,53.48c0,1.665,1.354,3.02,3.019,3.02h53.962c1.665,0,3.019-1.354,3.019-3.02V22.5H0V53.48z"/>
-                        </g>
-                       
-                    </svg>
-                    <a class="headertxt2 foldertxt">Hacks</a>
-                </div>
-
-
 
 
             </div>

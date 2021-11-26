@@ -51,11 +51,15 @@ var input = document.getElementById('input');
 
 
 var drag = document.querySelectorAll(".dragable");
+var dragHeader = document.querySelectorAll(".dragger");
 
 for (var i = 0; i < drag.length; i++) {
     var but2 = drag[i];
+    var but3 = dragHeader[i];
     dragElement(but2);
+
 }
+
 
 
 
@@ -68,15 +72,19 @@ function dragElement(elmnt) {
         /* if present, the header is where you move the DIV from:*/
 
 
-        but2.onmousedown = dragMouseDown;
+        but3.onmousedown = dragMouseDown;
     } else {
         /* otherwise, move the DIV from anywhere inside the DIV:*/
-        elmnt.onmousedown = dragMouseDown;
+        but2.onmousedown = dragMouseDown;
+
     }
 
 
     function dragMouseDown(e) {
-        input.focus();
+        if (elem = document.getElementById("console")) {
+            input.focus();
+        }
+
 
 
         e = e || window.event;
@@ -273,8 +281,6 @@ var Input = document.getElementById("input").onkeydown = function time(e) {
         var currentInput = document.getElementById("in");
 
 
-
-
         currentInput.innerHTML += "<div class=input-line> <a class=headertxt2>" + currentPath + " " + inputVal + "</a> </div>";
 
 
@@ -284,6 +290,7 @@ var Input = document.getElementById("input").onkeydown = function time(e) {
                 break;
 
             case "cd homework":
+            case "cd homework ":
                 currentPath = "C:\\users\\" + ip + "\\homework>";
 
                 currentInput.innerHTML += "<div class=input-line> <a class=headertxt2> " + currentPath + " " + inputVal + " </a> </div > ";
@@ -334,8 +341,12 @@ var Input = document.getElementById("input").onkeydown = function time(e) {
 
                 clearInterval(timerId);
                 break;
+            case "cd hacks":
+            case "cd hacks ":
+                currentPath = "C:\\users\\" + ip + "\\hacks>";
 
-
+                currentInput.innerHTML += "<div class=input-line> <a class=headertxt2> " + currentPath + " " + inputVal + " </a> </div > ";
+                break;
 
 
 
@@ -365,5 +376,69 @@ var Input = document.getElementById("input").onkeydown = function time(e) {
     }
 };
 
+//password input 
 
-//scroll
+
+var passInput = document.getElementById("passwordInput").onkeydown = function time(e) {
+    if (e.keyCode == 13) {
+
+        var passwrd = document.getElementById("passwordInput").value;
+
+        passwrd.value = '';
+    }
+}
+
+
+//folder explorer
+
+const card = document.getElementById('homeworkFolder');
+const backHack = document.getElementById('backHacks');
+const Password = document.getElementById('sec');
+
+card.addEventListener('dblclick', function(e) {
+
+
+    var y = document.getElementById("inHomework");
+    if (y.style.display === "none") {
+        y.style.display = "block";
+    } else {
+        y.style.display = "none";
+    }
+
+    var x = document.getElementById("mainFolder");
+    x.style.display = "none";
+
+
+
+});
+
+backHack.addEventListener('dblclick', function(e) {
+
+
+    var y = document.getElementById("inHomework");
+    if (y.style.display === "none") {
+        y.style.display = "block";
+    } else {
+        y.style.display = "none";
+    }
+
+    var x = document.getElementById("mainFolder");
+    x.style.display = "block";
+
+
+
+});
+
+Password.addEventListener('dblclick', function(e) {
+
+
+
+    var y = document.getElementById("pass");
+    if (y.style.display === "none") {
+        y.style.display = "block";
+    } else {
+        y.style.display = "none";
+    }
+
+
+});
